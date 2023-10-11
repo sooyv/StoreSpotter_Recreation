@@ -1,0 +1,67 @@
+#header {
+    justify-content: space-between;
+    display: flex;
+    /*flex-direction: row;*/
+    align-items: center;
+    border-bottom: solid 1px lightgrey;
+    background-color: white;
+}
+
+img {
+    height: 40px;
+    width: 40px;
+    margin: 15px;
+}
+
+#title {
+    font-family: 'Ubuntu', sans-serif;
+    color: #41637d;
+    text-decoration-line: none;
+    font-size: xx-large;
+}
+
+.title-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.header-ele {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: medium;
+    text-decoration-line: none;
+    padding: 15px;
+    color: gray;
+}
+
+.header-ele:hover {
+    background-color: lightgrey;
+    transition: 0.1s;
+    border-radius: 25px;
+}
+
+/*태블릿*/
+@media screen and (max-width: 900px) {
+    #title {
+        font-size: x-large;
+    }
+}
+
+/*핸드폰*/
+@media screen and (max-width: 414px)  {
+    #title {
+        font-size: large;
+    }
+
+    .header-ele {
+        font-size: small;
+        padding: 10px;
+    }
+}
