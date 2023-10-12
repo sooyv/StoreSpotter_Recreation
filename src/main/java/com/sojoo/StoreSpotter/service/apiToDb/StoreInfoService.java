@@ -1,6 +1,7 @@
 package com.sojoo.StoreSpotter.service.apiToDb;
 
 import com.sojoo.StoreSpotter.dao.apiToDb.StoreInfoMapper;
+import com.sojoo.StoreSpotter.dto.apiToDb.StoreInfo;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -66,6 +67,15 @@ public class StoreInfoService {
                     System.out.println("bizesId: " + bizesId);
                     System.out.println("bizesNm: " + bizesNm);
                     System.out.println("rdnmAdr: " + rdnmAdr);
+
+                    StoreInfo storeInfo = new StoreInfo();
+                    storeInfo.setBizesId(bizesId);
+                    storeInfo.setBizesNm(bizesNm);
+                    storeInfo.setRdnmAdr(rdnmAdr);
+
+                    // database에 저장하기
+                    storeInfoMapper.insertStoreInfo(storeInfo);
+
                 }
             }
 

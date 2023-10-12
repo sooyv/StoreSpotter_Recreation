@@ -8,7 +8,7 @@ import lombok.*;
 //@Getter @Setter
 public class StoreInfo {
     // 상가 번호
-    private Long bizesId;
+    private String bizesId;
     // 상가 이름
     private String bizesNm;
     // 상가 주소
